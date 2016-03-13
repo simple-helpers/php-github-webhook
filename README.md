@@ -8,7 +8,7 @@ This package contains classes, initially based on [dintel/php-github-webhook](ht
 ### Composer ###
 
 To add dependency, simply edit your `composer.json` and add to your `require`
-block following dependency - `"simple-helpers/php-github-webhook": "0.1.*"`. This is the
+block following dependency - `"simple-helpers/php-github-webhook": "*"`. This is the
 simplest way to bring php-github-webhook libraries into your project.
 
 ### Use case ###
