@@ -60,7 +60,7 @@ class Handler
     public function startLoggerInfo($logentriesToken)
     {
         $this->startLogger();
-        $this->_logger->pushHandler(new \Logentries\Handler\LogentriesHandler($logEtntriesToken, Logger::INFO));
+        $this->_logger->pushHandler(new \Logentries\Handler\LogentriesHandler($logentriesToken, Logger::INFO));
         return true;
     }
 
