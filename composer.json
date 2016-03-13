@@ -1,0 +1,24 @@
+{
+    "name": "simple-helpers/php-github-webhook",
+    "description": "Simple class for handling GitHub webhook calls",
+    "keywords": ["git","webhook"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Dmitry Zbarski",
+            "email": "dmitry.zbarski@gmail.com",
+            "homepage": "http://zbarski.info",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "monolog/monolog": "^1.18",
+        "logentries/logentries-monolog-handler": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GitHubWebhook\\": "src/"
+        }
+    }
+}
