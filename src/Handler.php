@@ -57,20 +57,6 @@ class Handler
         return $this->secret;
     }
 
-    public function startLoggerInfo($logentriesToken)
-    {
-        $this->startLogger();
-        $this->_logger->pushHandler(new \Logentries\Handler\LogentriesHandler($logentriesToken, Logger::INFO));
-        return true;
-    }
-
-    public function startLoggerDebug($logentriesToken)
-    {
-        $this->startLogger();
-        $this->_logger->pushHandler(new \Logentries\Handler\LogentriesHandler($logentriesToken, Logger::DEBUG));
-        return true;
-    }
-
     public function masterMerge($callback)
     {
         $this->_logger->addInfo("Master Merge handler registered");
@@ -132,9 +118,12 @@ class Handler
         return true;
     }
 
-    protected function startLogger()
+    public function startLogger($handler)
     {
         $this->_logger = new Logger('githubWebhookHandler');
+        $this->_logger->pushHandler($handler);
+
+        return true;
     }
 
     protected function validateSignature($gitHubSignatureHeader, $payload)

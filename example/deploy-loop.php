@@ -2,15 +2,17 @@
 
 require "vendor/autoload.php";
 
-use GitHubWebhook\Handler;
+use GitHubWebhook\Handler,
+    Logentries\Handler\LogentriesHandler;
 
 $githubWebhookSecret = "";
 $logentriesToken = "";
 
 
 $handler = new Handler($githubWebhookSecret, __DIR__);
+$logHandler = new LogentriesHandler('YOUR_TOKEN');
 
-$handler->startLoggerInfo($logentriesToken);
+$handler->startLogger($logHandler);
 
 $handler->masterMerge(
     function ($data) {
