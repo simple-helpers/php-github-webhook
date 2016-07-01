@@ -1,13 +1,9 @@
-PHP GitHub webhook package
+PHP GitHub webhook handler
 ==========================
-
-## Overview ##
-
-This package contains classes, initially based on [dintel/php-github-webhook](https://github.com/dintel/php-github-webhook) that allow perform php calls after Github webhooks.
 
 ### Composer ###
 
-To add dependency, simply edit your `composer.json` and add:
+Add to your `composer.json`:
 ```
 {
 "repositories": [
